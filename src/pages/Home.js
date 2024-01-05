@@ -1,14 +1,36 @@
 import * as React from 'react';
-import Name from '../components/Name';
-import AboutMe from '../components/AboutMe';
-import Skills from '../components/Skills';
+import { Grid } from '@mui/material';
+import NameCard from '../components/NameCard';
+import AboutMeCard from '../components/AboutMeCard';
+import SkillsCard from '../components/SkillsCard';
+import Box from '@mui/material/Box';
 
 export default function Home() {
     return (
-        <div>
-            <Name />
-            {/*<AboutMe />*/}
-            {/* <Skills /> */}
-        </div>
+        <Box sx={{ mt: 9 }}>
+            <Grid container spacing={9}>
+                <Grid item xs='1'>
+                </Grid>
+                <Grid item xs='10'>
+                    <NameCard />
+                </Grid>
+                <Grid item xs='1'>
+                </Grid>
+                <Grid item xs='1'>
+                </Grid>
+                <Grid item xs='10'>
+                    <AboutMeCard />
+                </Grid>
+                <Grid item xs='1'>
+                </Grid>
+                <Grid item xs='1'>
+                </Grid>
+                <Grid item xs='10'>
+                    <SkillsCard />
+                </Grid>
+                <Grid item xs='1'>
+                </Grid>
+            </Grid>
+        </Box>
     );
 }
